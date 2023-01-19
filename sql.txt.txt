@@ -1,0 +1,38 @@
+SELECT * FROM EMPLOYEE;
+Select * From EMPLOYEE;
+UPDATE EMPLOYEE SET e_sal=62000.00,e_add='sambalpur,odisha' WHERE e_id=106;
+UPDATE EMPLOYEE SET e_join_date='01-20-2023' WHERE e_id=107;
+rollback;
+commit;
+select * from EMPLOYEE where e_sal=60000.00;
+select * from EMPLOYEE where e_id=101;
+select e_id,e_name,e_sal from EMPLOYEE;
+select e_id,e_name,e_contact,e_sal*2 from EMPLOYEE;
+select e_id,e_name,e_contact,e_sal+2 from EMPLOYEE;
+select * from EMPLOYEE where e_sal > 60000.00;
+select * from EMPLOYEE where e_sal >= 60000.00;
+select * from EMPLOYEE where e_join_date >'03/20/2023';
+select * from EMPLOYEE where e_join_date >='03/20/2023';
+select * from EMPLOYEE where e_join_date <'03/20/2023';
+select * from EMPLOYEE where e_join_date <= '03/20/2023';
+INSERT INTO EMPLOYEE VALUES(108,'debi',7978654536,60000.00,NULL,'01-28-2023');
+select e_id,e_name,e_contact,e_sal,nvl(e_add,0) from EMPLOYEE;
+INSERT INTO EMPLOYEE VALUES(109,'rajesh',7787941599,60000.00,'bhadrak,odisha',NULL);
+select e_id,e_name,e_contact,e_sal,e_add,e_join_date from EMPLOYEE;
+INSERT INTO EMPLOYEE VALUES(110,'abhijit',789456792,NULL,'baleswar,odisha','11-25-2023');
+select e_id,e_name,e_contact,NVL(e_sal,0),e_add,e_join_date from EMPLOYEE;
+
+
+
+
+E_ID	E_NAME	E_CONTACT	NVL(E_SAL,0)	E_ADD	                E_JOIN_DATE
+101	soumya	8144569298	60000	        jajpur,odisha,india	01/20/2023
+102	prakash	7008960812	70000	        keunjhar,odisha,india	03/20/2023
+103	bikram	6378678908	62000	        cuttack,odisha,india	03/10/2023
+104	bitasis	9777897834	70000	        cuttack,odisha,india	06/20/2023
+105	aman	9347890123	60000	        dhenknal,odisha,india	05/05/2023
+106	preet	8144569298	62000	        sambalpur,odisha	01/20/2023
+108	debi	7978654536	60000	        -	                01/28/2023
+107	biswa	9786567890	100000	        kendrapada,odisha,india	01/20/2023
+109	rajesh	7787941599	60000	        bhadrak,odisha	        -
+110	abhijit	789456792	0	        baleswar,odisha	        11/25/2023
